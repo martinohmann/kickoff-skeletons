@@ -1,0 +1,20 @@
+---
+language: go
+sudo: false
+go:
+  - "{{.Values.golang.targetVersion}}"
+  - "tip"
+env:
+  global:
+    - GO111MODULE=on
+cache:
+  directories:
+    - $HOME/.cache/go-build
+    - $HOME/gopath/pkg/mod
+script:
+  - make coverage
+  - make lint
+{{- if .Values.travis.publishCodeCov }}
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+{{- end }}
