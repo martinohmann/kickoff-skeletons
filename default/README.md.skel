@@ -1,10 +1,10 @@
-# {{.ProjectName}}
+# {{.Project.Name}}
 
 ![GitHub](https://img.shields.io/github/license/{{.Git.User}}/{{.Git.RepoName}}?color=orange)
 
 {{ if .License -}}
 ## License
 
-The source code of {{.ProjectName}} is released under the {{.License.Name}}. See the bundled
+The source code of {{.Project.Name}} is released under the {{.License.Name}}. See the bundled
 LICENSE file for details.
 {{- end }}
