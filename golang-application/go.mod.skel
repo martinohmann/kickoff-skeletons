@@ -1,3 +1,3 @@
-module {{.Repository.GoPackagePath}}
+module {{.Git.GoPackagePath}}
 
 go {{.Values.golang.targetVersion}}
