@@ -1,5 +1,4 @@
 ---
-license: mit
 values:
   golang:
     targetVersion: "1.13"

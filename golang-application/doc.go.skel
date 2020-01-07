@@ -1,3 +1,3 @@
-// Package {{.ProjectName|goPackageName}} provides a library to work with stuff
-// and things.
-package {{.ProjectName|goPackageName}}
+// Package {{.Project.Name|goPackageName}} provides a library to work with
+// stuff and things.
+package {{.Project.Name|goPackageName}}

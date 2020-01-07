@@ -22,7 +22,7 @@ kickoff list
 ```
 
 **Hint**: you can also store it in a different directory if you like. In this
-case pass the location via the `--skeletons-dir` flag to the list command above.
+case pass the location via the `--repository-url` flag to the list command above.
 
 ## Customization
 
