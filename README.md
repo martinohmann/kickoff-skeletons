@@ -18,7 +18,7 @@ git clone https://github.com/martinohmann/kickoff-skeletons ~/.config/kickoff/sk
 Verify that the skeletons are recognized by `kickoff`:
 
 ```
-kickoff list
+kickoff skeletons list
 ```
 
 **Hint**: you can also store it in a different directory if you like. In this
