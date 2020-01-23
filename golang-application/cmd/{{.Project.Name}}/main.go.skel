@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"{{.Git.GoPackagePath}}/pkg/version"
+	"{{.Project.GoPackagePath}}/pkg/version"
 )
 
 func main() {

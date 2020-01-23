@@ -1,6 +1,6 @@
 # {{.Project.Name}}
 
-![GitHub](https://img.shields.io/github/license/{{.Git.User}}/{{.Git.RepoName}}?color=orange)
+![GitHub](https://img.shields.io/github/license/{{.Project.Owner}}/{{.Project.Name}}?color=orange)
 
 {{ if .License -}}
 ## License
