@@ -6,13 +6,10 @@ Skeleton repository for [kickoff](https://github.com/martinohmann/kickoff).
 
 ## Getting started
 
-Clone the repository into your local config directory (replace
-`~/.config/kickoff/skeletons` with `~/Library/Application\ Support/kickoff` on
-OSX):
+Add the repository to your local cache:
 
 ```
-mkdir -p ~/.config/kickoff
-git clone https://github.com/martinohmann/kickoff-skeletons ~/.config/kickoff/skeletons
+kickoff repository add kickoff-skeletons https://github.com/martinohmann/kickoff-skeletons
 ```
 
 Verify that the skeletons are recognized by `kickoff`:
@@ -20,9 +17,6 @@ Verify that the skeletons are recognized by `kickoff`:
 ```
 kickoff skeletons list
 ```
-
-**Hint**: you can also store it in a different directory if you like. In this
-case pass the location via the `--repository-url` flag to the list command above.
 
 ## Customization
 
