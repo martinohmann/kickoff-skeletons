@@ -3,6 +3,4 @@ description: |
   Skeleton for a golang library project.
 values:
   golang:
-    targetVersion: "1.13"
-  travis:
-    publishCodeCov: false
+    targetVersion: "1.15"

@@ -1,11 +1,7 @@
 package main
 
-import (
-	"fmt"
-
-	"{{.Project.GoPackagePath}}/pkg/version"
-)
+import "{{.Project.GoPackagePath}}/pkg/cmd"
 
 func main() {
-	fmt.Printf("Hello from {{.Project.Name}}! Version: %#v\n", version.Get())
+	cmd.Execute()
 }

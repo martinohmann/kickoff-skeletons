@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := help
 
-GOLANGCI_LINT_VERSION ?= v1.19.1
+GOLANGCI_LINT_VERSION ?= v1.31.0
 TEST_FLAGS ?= -race
 PKG_BASE ?= $(shell go list .)
 PKGS ?= $(shell go list ./... | grep -v /vendor/)
@@ -11,12 +11,9 @@ help:
 
 .PHONY: build
 build: ## build {{.Project.Name}}
-	go build \
-		-ldflags "-s -w \
-			-X $(PKG_BASE)/pkg/version.gitVersion=$(shell git describe --tags 2>/dev/null || echo v0.0.0-master) \
-			-X $(PKG_BASE)/pkg/version.gitCommit=$(shell git rev-parse HEAD) \
-			-X $(PKG_BASE)/pkg/version.buildDate=$(shell date -u +'%Y-%m-%dT%H:%M:%SZ')" \
-		./cmd/{{.Project.Name}}
+	go build -ldflags \
+	  "-s -w -X $(PKG_BASE)/pkg/cmd.version=$(shell git describe --tags 2>/dev/null || echo v0.0.0-master)" \
+	  ./cmd/{{.Project.Name}}
 
 .PHONY: install
 install: build ## install {{.Project.Name}}

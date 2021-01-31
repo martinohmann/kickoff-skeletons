@@ -1,13 +1,14 @@
 # {{.Project.Name}}
 
-[![Build Status](https://travis-ci.org/{{.Project.Owner}}/{{.Project.Name}}.svg?branch=master)](https://travis-ci.org/{{.Project.Owner}}/{{.Project.Name}})
+[![Build Status](https://github.com/{{.Project.Owner}}/{{.Project.Name}}/workflows/build/badge.svg)](https://github.com/{{.Project.Owner}}/{{.Project.Name}}/actions?query=workflow%3Abuild)
+[![Go Report Card](https://goreportcard.com/badge/github.com/{{.Project.Owner}}/{{.Project.Name}})](https://goreportcard.com/report/github.com/{{.Project.Owner}}/{{.Project.Name}})
 [![GoDoc](https://godoc.org/{{.Project.GoPackagePath}}?status.svg)](https://godoc.org/{{.Project.GoPackagePath}})
 ![GitHub](https://img.shields.io/github/license/{{.Project.Owner}}/{{.Project.Name}}?color=orange)
 
 ## Installation
 
 ```
-go get -u {{.Project.GoPackagePath}}
+go get -u {{.Project.GoPackagePath}}/cmd/{{.Project.Name}}
 ```
 
 {{ if .License -}}

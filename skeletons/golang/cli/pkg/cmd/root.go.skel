@@ -1,0 +1,39 @@
+package cmd
+
+import (
+	"fmt"
+	"os"
+
+	"github.com/spf13/cobra"
+)
+
+// Version is set via build args.
+var version = "v0.0.0-master"
+
+func newRootCommand() *cobra.Command {
+	cmd := &cobra.Command{
+		Use:           "{{.Project.Name}}",
+		Version:       version,
+		SilenceErrors: true,
+		PersistentPreRun: func(cmd *cobra.Command, args []string) {
+			// Do not display usage on errors that happen after successful
+			// command parsing.
+			cmd.SilenceUsage = true
+		},
+		RunE: func(cmd *cobra.Command, args []string) error {
+			fmt.Println(cmd.Name())
+			return nil
+		},
+	}
+
+	return cmd
+}
+
+func Execute() {
+	cmd := newRootCommand()
+
+	if err := cmd.Execute(); err != nil {
+		fmt.Fprintf(os.Stderr, "error: %v\n", err)
+		os.Exit(1)
+	}
+}
